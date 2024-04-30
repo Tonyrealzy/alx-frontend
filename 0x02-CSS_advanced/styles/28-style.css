@@ -1,9 +1,10 @@
-/* Add the card-testimonial selector
-Center align the text
-Target the card-avatar that is inside the card-testimonial
-Round the radius on all sides at 50%
-Set the width to 10x the root element
-Set the height to 10x the root element
+/* Create these custom properties
+Name: header-padding, Value: 4rem 0 0
+Name: header-logo-position, Value: relative
+Name: header-logo-link-display, Value: inline-block
+Name: header-logo-link-position, Value: absolute
+Name: header-logo-link-top, Value: -1rem
+Name: header-logo-link-left, Value: 0
 */
 
 @import url('../normalize.css');
@@ -63,6 +64,13 @@ Set the height to 10x the root element
     --button-hover-color: var(--color-white);
     --button-hover-text-decoration: none;
     --button-hover-background: var(--color-primary);
+
+    --header-padding: 4rem 0 0;
+    --header-logo-position: relative;
+    --header-logo-link-display: inline-block;
+    --header-logo-link-position: absolute;
+    --header-logo-link-top: -1rem;
+    --header-logo-link-left: 0;
 }
 
 [data-section-theme=“dark”] {
@@ -101,6 +109,18 @@ a[href]:hover {
 }
 a[href]:active {
     background-color: var(--color-light-grey);
+}
+.header {
+    padding: var(--header-padding);
+}
+.header-logo {
+    position: var(--header-logo-position);
+}
+.header-logo a {
+    display: var(--header-logo-link-display);
+    position: var(--header-logo-link-position);
+    top: var(--header-logo-link-top);
+    left: var(--header-logo-link-left);
 }
 .button {
     display: var(--button-display);
@@ -197,6 +217,17 @@ button:hover {
     font-weight: var(--font-weight-bold);
     text-transform: var(--section-tagline-transform);
     margin: var(--section-tagline-margin);
+}
+.section-hero {
+    background-size: auto 90rem;
+    width: 90rem;
+    height: auto;
+}
+.section-hero .section-title {
+    margin: 0 0 5rem 0;
+}
+.section-hero .section-inner {
+    padding: 10rem 40rem 2rem 0;
 }
 ul.row {
     margin: 0;
